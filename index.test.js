@@ -17,7 +17,7 @@ test('Testing route /', (done) => {
 test('Testing route /data', (done) => {
     request(app)
     .get('/data')
-    .expect(404)
+    .expect(200)
     .expect('Content-Type', /json/)
     .end((err, res) => {
         if (err) return done(err);
